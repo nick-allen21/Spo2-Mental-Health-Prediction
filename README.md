@@ -16,6 +16,6 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
     ```sh
     pip3 install -r requirements.txt
     ```
-4. Upload with data of the following form
+4. Edit the data paths to process your data. Ensure your starting CSVs are in the correct form
    
 
