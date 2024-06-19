@@ -8,13 +8,14 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
 ## Setup
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repository.git
+    https://github.com/nick-allen21/Spo2-Mental-Health-Prediction.git
     ```
-2. Navigate to the repository directory:
+2. Load the repository into code editor of your choice (recommend VS code)
+
+3. Download the requirements script
     ```sh
-    cd your-repository
+    pip3 install -r requirements.txt
     ```
-3. Run the script:
-    ```sh
-    python big.py
-    ```
+4. Edit the data paths to process your data. Ensure your starting CSVs are in the correct form
+   
+

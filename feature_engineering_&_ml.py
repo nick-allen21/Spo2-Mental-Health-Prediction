@@ -22,8 +22,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 from tabulate import tabulate
-from google.colab import auth
-from google.cloud import storage
 from scipy import stats
 import csv
 import matplotlib.pyplot as plt
@@ -45,15 +43,11 @@ import multiprocessing
 from pathlib import Path
 from matplotlib.animation import FuncAnimation
 import matplotlib.pyplot as plt
-from IPython.display import HTML
-from moviepy.editor import ImageSequenceClip
-from google.colab import drive
-drive.mount('/content/drive')
 plt.style.use("seaborn")
 
-Spo2_path = "/content/drive/MyDrive/Stanford Snyder Lab /Nick/Avg_SpO2.parquet"
-check_point_path = "/content/drive/MyDrive/Stanford Snyder Lab /PHI - Shared Space - Wearables & Mental Health/Survey_Master.csv"
-mental_health_path = "/content/drive/MyDrive/Stanford Snyder Lab /Nick/wearables_PSS_dataset.csv"
+Spo2_path = "Path to you Spo2 Data, Global De-identified rows, Date columns"
+check_point_path = "Path to checkpoints "
+mental_health_path = "Path to mental health data"
 df = pd.read_parquet(Spo2_path)
 cpdf = pd.read_csv(check_point_path)
 mhdf = pd.read_csv(mental_health_path)
