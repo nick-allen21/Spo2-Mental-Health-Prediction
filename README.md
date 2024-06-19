@@ -1,5 +1,5 @@
 # Spo2-Mental-Health-Prediction
-Over the past year, I have been part of Stanford's Snyder Lab aiding in their pursuit to predict mental health states via wearable technology. Using 718 participants, wearable data, and robust survey questionnaires, we have been using machine learning to predict a patients mental health state at a given point. I have primarily worked with SpO2 and Stress. This code can be generalized to all wearable signals and all mental health signals. 
+Over the past year, I have been part of Stanford's Snyder Lab aiding in their pursuit to predict mental health states via wearable technology. Using 718 participants, wearable data, and robust survey questionnaires, we have been using machine learning to predict a patients mental health state at a given point. Here is a small portion of my work where I have used machine learning models to deeply analyze the relationship between a mental health signal and a wearable device signal. I have primarily worked with SpO2 and Stress. This code can be generalized to all wearable signals and all mental health signals. 
 ## Methods
 - Data preprocessing and cleaning
 - Feature engineering 
