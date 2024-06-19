@@ -20,3 +20,7 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
 
 
 
+
+## 10 Days Before Survey
+![10_before_with_0_total_data_0_pre_survey](graphs/10_before_with_0_total_data_0_pre_survey.png)
+![10_before_with_40_total_data_50_pre_survey](graphs/10_before_with_40_total_data_50_pre_survey.png)
