@@ -8,11 +8,11 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
 ## Setup
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repository.git
+    https://github.com/nick-allen21/Spo2-Mental-Health-Prediction.git
     ```
 2. Navigate to the repository directory:
     ```sh
-    cd your-repository
+    cd Spo2-Mental-Health-Prediction
     ```
 3. Run the script:
     ```sh
