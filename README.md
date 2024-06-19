@@ -61,6 +61,7 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
 ![Correlation between High Stress and Low Stress ratio above below 7 check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20ratio%20above%20below%207%20check.png)
 
 
+
 ## Difference Histograms
 ![Difference_from_30_hist](graphs/Difference_from_30_hist.png)
 ![Difference_from_30_last_7_hist](graphs/Difference_from_30_last_7_hist.png)
