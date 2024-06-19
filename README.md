@@ -42,22 +42,24 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
 ![30_day_avg_hist](graphs/30_day_avg_hist.png)
 ![All_data_his](graphs/All_data_his.png)
 
-## Correlation Graphs
-![Correlation between High Stress and Low Stress 3 day average pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_3_day_average_pre_check.png)
-![Correlation between High Stress and Low Stress 3 max - min pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_3_max_-_min_pre_check.png)
-![Correlation between High Stress and Low Stress 30 day average pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_30_day_average_pre_check.png)
-![Correlation between High Stress and Low Stress 30 max - min pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_30_max_-_min_pre_check.png)
-![Correlation between High Stress and Low Stress 7 day average pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_7_day_average_pre_check.png)
-![Correlation between High Stress and Low Stress 7 max - min pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_7_max_-_min_pre_check.png)
-![Correlation between High Stress and Low Stress 9 day average pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_9_day_average_pre_check.png)
-![Correlation between High Stress and Low Stress Day before check](graphs/Correlation_between_High_Stress_and_Low_Stress_Day_before_check.png)
-![Correlation between High Stress and Low Stress PSS Score at check](graphs/Correlation_between_High_Stress_and_Low_Stress_PSS_Score_at_check.png)
-![Correlation between High Stress and Low Stress avg Difference 3 days pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_avg_Difference_3_days_pre_check.png)
-![Correlation between High Stress and Low Stress avg Difference 7 days pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_avg_Difference_7_days_pre_check.png)
-![Correlation between High Stress and Low Stress days decreasing pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_days_decreasing_pre_check.png)
-![Correlation between High Stress and Low Stress days increasing pre check](graphs/Correlation_between_High_Stress_and_Low_Stress_days_increasing_pre_check.png)
-![Correlation between High Stress and Low Stress ratio above below 30 check](graphs/Correlation_between_High_Stress_and_Low_Stress_ratio_above_below_30_check.png)
-![Correlation between High Stress and Low Stress ratio above below 7 check](graphs/Correlation_between_High_Stress_and_Low_Stress_ratio_above_below_7_check.png)
+# Correlation Graphs
+
+![Correlation between High Stress and Low Stress 3 day average pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%203%20day%20average%20pre%20check.png)
+![Correlation between High Stress and Low Stress 3 max - min pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%203%20max%20-%20min%20pre%20check.png)
+![Correlation between High Stress and Low Stress 30 day average pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%2030%20day%20average%20pre%20check.png)
+![Correlation between High Stress and Low Stress 30 max - min pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%2030%20max%20-%20min%20pre%20check.png)
+![Correlation between High Stress and Low Stress 7 day average pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%207%20day%20average%20pre%20check.png)
+![Correlation between High Stress and Low Stress 7 max - min pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%207%20max%20-%20min%20pre%20check.png)
+![Correlation between High Stress and Low Stress 9 day average pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%209%20day%20average%20pre%20check.png)
+![Correlation between High Stress and Low Stress Day before check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20Day%20before%20check.png)
+![Correlation between High Stress and Low Stress PSS Score at check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20PSS%20Score%20at%20check.png)
+![Correlation between High Stress and Low Stress avg Difference 3 days pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20avg%20Difference%203%20days%20pre%20check.png)
+![Correlation between High Stress and Low Stress avg Difference 7 days pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20avg%20Difference%207%20days%20pre%20check.png)
+![Correlation between High Stress and Low Stress days decreasing pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20days%20decreasing%20pre%20check.png)
+![Correlation between High Stress and Low Stress days increasing pre check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20days%20increasing%20pre%20check.png)
+![Correlation between High Stress and Low Stress ratio above below 30 check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20ratio%20above%20below%2030%20check.png)
+![Correlation between High Stress and Low Stress ratio above below 7 check](graphs/Correlation%20between%20High%20Stress%20and%20Low%20Stress%20ratio%20above%20below%207%20check.png)
+
 
 ## Difference Histograms
 ![Difference_from_30_hist](graphs/Difference_from_30_hist.png)
