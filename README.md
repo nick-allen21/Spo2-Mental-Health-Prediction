@@ -10,11 +10,12 @@ Over the past year, I have been part of Stanford's Snyder Lab aiding in their pu
     ```sh
     https://github.com/nick-allen21/Spo2-Mental-Health-Prediction.git
     ```
-2. Navigate to the repository directory:
+2. Load the repository into code editor of your choice (recommend VS code)
+
+3. Download the requirements script
     ```sh
-    cd Spo2-Mental-Health-Prediction
+    pip3 install -r requirements.txt
     ```
-3. Run the script:
-    ```sh
-    python big.py
-    ```
+4. Upload with data of the following form
+   
+
