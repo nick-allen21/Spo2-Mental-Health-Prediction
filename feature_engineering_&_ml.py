@@ -8,9 +8,17 @@ Original file is located at
 
 # Introduction
 
-This notebook will begin to map the SpO2 data to mental health outcomes in the search for an objective measure for quantifying mental health.
+This notebook can be used given a wearable signal, and a mental health signal, to elucidate everything that one needs to know about the correlation between the two. This includes the following:
+
+The Machine Learning model that can be used to predict mental health from the wearable signal
+The statistical tests that can be used to determine the significance of the correlation between the two
+The feature engineering that can be used to extract the most important features from the wearable signal
+The data visualization that can be used to understand the correlation between the two signals
+The data preprocessing that can be used to clean and prepare the data for the model
+The data loading that can be used to load the data into the model
 
 # 1) Effective Package/Data loading
+===========================================================================================
 """
 
 import pandas as pd
@@ -25,6 +33,7 @@ from tabulate import tabulate
 from scipy import stats
 import csv
 import matplotlib.pyplot as plt
+import seaborn
 import pandas as pd
 import subprocess
 import datetime
@@ -43,68 +52,20 @@ import multiprocessing
 from pathlib import Path
 from matplotlib.animation import FuncAnimation
 import matplotlib.pyplot as plt
-plt.style.use("seaborn")
 
-Spo2_path = "Path to you Spo2 Data, Global De-identified rows, Date columns"
+signal_Path = "Path to your Signal Data, Global De-identified rows, Date columns"
 check_point_path = "Path to checkpoints "
 mental_health_path = "Path to mental health data"
-df = pd.read_parquet(Spo2_path)
+df = pd.read_parquet(signal_Path)
 cpdf = pd.read_csv(check_point_path)
 mhdf = pd.read_csv(mental_health_path)
 
-"""# 2) Reformation of Data Frames
-
-Making the data frame into one more cohesive data frame that is easier to work with for the purpose of my data
-
-Using the df, cpdf, and mhdf into to make one cohesive data frame with the following structure
-
-ID | % Of All Data | % of data (30 or 7) days before Ci | Date survey | 30 day average before checkpoint i|
-
-We will create a dictionary
-```
-data = {
-    'Global_Deidentified': []
-    '% Of All Data Present': []
-    'Num Surveys Done / 6': []
-    'Date Survey i': []
-    '% Data present in 30 days before Ci' = []
-    '30 day average before survey Ci': []
-    '7 day average before survey Ci': []
-    'PSS Score at Ci': []
-}
-This framing is nice because it will allow us to keep adding columns of data in the previous days as we add new mental health features
-
-```
-And convert into Data frame. We will also have a dictionary of multiple data frames. The keys will be indivdual participants in our study. The values will be data frames.
-
-
-
-```
-data = {
-    'Global_Deidentified' : data_frame
-}
-
-data_frame = {
-  dates = []
-  c1 = []
-  c2 = []
-  c3 = []
-  c4 = []
-  c5 = []
-  c6 = []
-}
-
-```
-data_frame : dates|c1|c2|c3|c4|c5|c6
-
-where we have the 30 days of data leading up to each checkpoint.
-
-
-"""
-
 from datetime import timedelta
 import pandas as pd
-
+'''
+# 2) Data Preprocessing and reformation of the data frame
+===========================================================================================
+'''
 # Assuming df and cpdf are defined earlier in your code
 start_date = pd.to_datetime("2022-11-14")
 pre_checkpoint_month = {}
@@ -177,23 +138,7 @@ result = weighted_difference(data_7, data_average)
 print(result)
 
 import pandas as pd
-'''
-data = {
-    'Global_Deidentified': []
-    '% Of All Data Present': []
-    'Num Surveys Done / 6': []
-    'Date Survey i': []
-    '% Data present in 30 days before Ci' = []
-    '30 day average before survey Ci': []
-    '7 day average before survey Ci': []
-    'PSS Score at Ci': []
-}
-
-Will convert dicionary of this structure to data frame
-'''
-# Total difference and weight the days right before the highest
-# np.arragne(-3,3,1) with sigmoid based on range and weight the differences
-# before a survey the highest
+import numpy as np
 
 keys = ['Global_Deidentified', '% All Data', 'frac surveys',]
 for i in range(1,7):
@@ -375,6 +320,11 @@ df_omnis = df_omnis.sort_values(by = '% All Data', ascending = False)
 print(tabulate(df_omnis, headers='keys', tablefmt='psql', showindex = False))
 for col in df_omnis.columns:
   print(col)
+  
+'''
+#3) Data Visualization for Mental Health signal and understnading trends 
+===========================================================================================
+'''
 
 PSS_hist = []
 
@@ -402,23 +352,9 @@ plt.xticks(np.arange(0, 41, 2))
 plt.grid(True)
 plt.show()
 
-# Let's update the code to use the actual column headings and titles from the provided DataFrame screenshot.
-# As before, we will use the hypothetical data structure as the actual DataFrame is not provided.
-
-# We'll create a function that can be used to generate the plots from the DataFrame `df_omnis`.
 '''
-changing to poppulate with k-means clustering derived centers
-
-5.60588235
-13.12735849
-20.33793103
-
-ziv values :
-
-low = 7
-mid = 20
-high = 33
-
+#4) Classifying mental health score into categories 
+===========================================================================================
 '''
 def generate_stress_plots(df):
     # Define the stress level categories based on the PSS Score ranges
@@ -449,7 +385,10 @@ def generate_stress_plots(df):
 
 # Call the function with hypothetical data
 generate_stress_plots(df_omnis)
-
+'''
+#5) Plotting the stress levels
+===========================================================================================
+'''
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -753,18 +692,10 @@ for val in [1, 3, 7, 10, 15, 30]:
     for tup in [(0, 0), (40, 50)]:
         plot_stress_levels(pre_checkpoint_month, df_omnis, days_to_output=val, total_data_threshold=tup[0], pre_survey_threshold=tup[1])
 
-"""# Significance"""
-
-# df --> data frame with first column storing Global_Deidentified and every subsequent column storing a date as the head and the sleep data in the column
-# cpdf --> Global_Deidentified in the first column and date taken for each of the 6 surveys for the columns after
-# mhdf --> PSS at each checkpoint for each and every participant
-# df_omnis --> Global Deidentified in the first column and the all 'Global_Deidentified', '% All Data', 'frac surveys', 'Date Taken ci', '% Present 30 before Date ci', '30 day average pre c1i', '7 day average pre ci', 'PSS Score at ci']
-# pre_checkpoint_month --> dictionary mapping Gloabl_Deidentified to their 30 day pre checkpoint data, and their survey dates
-
-"""Histogram to analyze if 30 day averages before a checkpoint are actually variable or if this is too much data smoothing"""
-
-# Assuming your DataFrame is named df_omnis
-# Create a copy of the DataFrame to modify
+'''
+# 6) Plotting the histograms of the 30 day averages
+===========================================================================================
+'''
 df_modified = df_omnis.copy()
 
 # List of checkpoints
@@ -846,6 +777,10 @@ print(np.std(data_values))
 print(np.mean(data_values))
 print(np.median(data_values))
 
+'''
+#7) Classifying the stress levels
+===========================================================================================
+'''
 """Add last column to the df_omnis connecting the low\high\medium stress states to a classification that is in line with the manner in which Ziv classified.
 
 "continually increasing" : participant is low or medium stress in each of the first Stress Level c1',  'Stress Level c2', 'Stress Level c3', with at least one entry in the low category, and medium or high stress in  'Stress Level c4', 'Stress Level c5', 'Stress Level c6' with at least one entry in high stress
@@ -899,6 +834,12 @@ for cls in classifications:
 for cls, count in classification_counts_dict.items():
     print(f"{cls} has {count} participants")
     print(f"Here are the identifiers for {cls}: {classification_sets_dict[cls]}")
+    
+    
+'''
+#8) Creating dictionary with data frame for each participant
+===========================================================================================
+'''
 
 """Plot how often people variate from their 30 average/median within a certain number of day --> signficance testing for my other plots where I look for trends
 
